@@ -59,7 +59,7 @@ const ongoing = [
 
 function loadData() { return Promise.resolve(); }
 
-const MAX = 200;
+const MAX = 20;
 const clip = s => s.length > MAX ? s.slice(0, MAX) + '\u2026' : s;
 const $ = id => document.getElementById(id);
 
