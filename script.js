@@ -22,11 +22,10 @@ const projects = [
     name: "music selfbot",
     description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
     details: [
-      "plays music directly in voice channels via selfbot",
-      "no bot token needed, just your user token",
-      "supports youtube, soundcloud and more",
-      "queue system with skip, pause, stop commands",
-      "zero external dependencies beyond audio libs"
+      "plays music in vc via selfbot",
+      "uses youtube for songs (no api key needed)",
+      "idk vro just enter a song name n ts 100% free",
+      "queue system with skip, pause, stop, playlist (using cheap free DB for broke ppl)"
     ],
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
@@ -41,11 +40,10 @@ const ongoing = [
     name: "server info selfbot",
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
-      "lists all roles and their permission flags",
-      "shows channel permission overrides per role",
-      "displays full server hierarchy tree",
-      "no admin perms needed, runs on user token",
-      "currently working on member audit log scraping"
+      "shows every roles, their perms in a .txt filr",
+      "displays full server roles hierarchy, ALSO in a .txt file",
+      "no admin perms needed, NO perms",
+      "currently adding more shi"
     ],
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
