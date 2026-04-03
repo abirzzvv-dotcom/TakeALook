@@ -2,7 +2,7 @@ const profile = {
   username: "Abirz",
   handle: "abirrrzzzz",
   initials: "AB",
-  avatar: "https://cdn.discordapp.com/attachments/1488144355301527657/1489211915178606673/Picsart_26-04-02_16-35-56-615.png?ex=69cf982c&is=69ce46ac&hm=b1fb6b45e8bfa55d7c1e253e5aeab4f2d7e2ea639a6bffa796cfd0e035d71180&",
+  avatar: "avatar.png",
   tagline: "i lowknetanyahuinely shit",
   bio: "hi mate",
   description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
@@ -10,8 +10,8 @@ const profile = {
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
-  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached", accent: "#23a55a", ext: "png" },
+  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
