@@ -10,8 +10,8 @@ const profile = {
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
-  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 37 Reached", accent: "#23a55a", ext: "png" },
+  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026💔🤞",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
