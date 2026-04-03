@@ -2,7 +2,7 @@ const profile = {
   username: "Abirz",
   handle: "abirrrzzzz",
   initials: "AB",
-  avatar: "avatar.png",
+  avatar: "https://cdn.discordapp.com/attachments/1488144355301527657/1489211915178606673/Picsart_26-04-02_16-35-56-615.png?ex=69cf982c&is=69ce46ac&hm=b1fb6b45e8bfa55d7c1e253e5aeab4f2d7e2ea639a6bffa796cfd0e035d71180&",
   tagline: "i lowknetanyahuinely shit",
   bio: "hi mate",
   description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
@@ -10,8 +10,8 @@ const profile = {
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 37 Reached", accent: "#23a55a", ext: "png" },
-  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026💔🤞",  accent: "#5662f6", ext: "svg" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
+  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
@@ -22,10 +22,11 @@ const projects = [
     name: "music selfbot",
     description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
     details: [
-      "plays music in voice channels via selfbot",
-      "YOU are running ts at your own risk, if you dont agree, then dont fw me",
-      "idk bro just enterr a song name",
-      "queue system with skip, pause, stop, playlist(with db OR localDB)
+      "plays music directly in voice channels via selfbot",
+      "no bot token needed, just your user token",
+      "supports youtube, soundcloud and more",
+      "queue system with skip, pause, stop commands",
+      "zero external dependencies beyond audio libs"
     ],
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
@@ -41,10 +42,10 @@ const ongoing = [
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
       "lists all roles and their permission flags",
-      "shows role permissions, stored in a txt file",
-      "displays full server hierarchy tree ALSO stored in a txt file",
+      "shows channel permission overrides per role",
+      "displays full server hierarchy tree",
       "no admin perms needed, runs on user token",
-      "currently NOT working (sleepy"
+      "currently working on member audit log scraping"
     ],
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
