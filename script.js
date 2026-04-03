@@ -3,15 +3,15 @@ const profile = {
   handle: "abirrrzzzz",
   initials: "AB",
   avatar: "avatar.png",
-  tagline: "i lowknetanyahuinely shit",
+  tagline: "netanyahu",
   bio: "hi mate",
-  description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
+  description: "purely for looking fuckass but cool, but you definitely CAN use the projects(except you cant)",
   status: "online"
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
-  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 37 Reached", accent: "#23a55a", ext: "png" },
+  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026💔",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
@@ -27,11 +27,10 @@ const projects = [
     name: "music selfbot",
     description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
     details: [
-      "plays music directly in voice channels via selfbot",
-      "no bot token needed, just your user token",
-      "supports youtube, soundcloud and more",
-      "queue system with skip, pause, stop commands",
-      "zero external dependencies beyond audio libs"
+      "plays music in vc(no shit)",
+      "idk just enter a music name, it tries to find it in youtube",
+      "queue system, playlist system(two versions, one for db, one for cheap workaround)",
+      "zero changes required(not actually)"
     ],
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
@@ -46,11 +45,9 @@ const ongoing = [
     name: "server info selfbot",
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
-      "lists all roles and their permission flags",
-      "shows channel permission overrides per role",
-      "displays full server hierarchy tree",
-      "no admin perms needed, runs on user token",
-      "currently working on member audit log scraping"
+      "lists all roles and their permission flags(in a txt file)",
+      "displays full server hierarchy tree (ALSO in a txt file)",
+      "no admin perms needed, runs on user token"
     ],
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
