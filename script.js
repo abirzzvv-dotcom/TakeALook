@@ -15,7 +15,12 @@ const badges = [
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
-
+// SOOO
+// its mr hacker, here??
+// tryna fcking f12 on me
+// nigga i dont give a fuck, except
+// im just curious
+// what the actual FUCK brings you here?
 const projects = [
   {
     id: "music-selfbot",
