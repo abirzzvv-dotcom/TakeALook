@@ -208,7 +208,7 @@ function mkCard(p, isOngoing) {
       <span class="proj-name">${p.name}</span>
       <a class="proj-gh-link" href="${p.link}" target="_blank" rel="noopener noreferrer" title="View on GitHub">${ghIcon}</a>
     </div>
-    <div class="proj-desc">${clip(p.description)}</div>
+    <div class="proj-desc" onclick="this.classList.toggle('open')">${clip(p.description)}</div>
     ${progress}
     <div class="proj-meta">
       <div class="lang-wrap">${langDot}<span class="lang-name">${p.language}</span></div>
