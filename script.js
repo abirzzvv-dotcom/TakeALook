@@ -30,7 +30,7 @@ const projects = [
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
     langColor: "#68a063",
-    tags: ["NodeJS", "Selfbot", "Discord", "Music"]
+    tags: ["NodeJS", "Selfbot", "Discord", "Music", "FFmpeg"]
   }
 ];
 
@@ -40,7 +40,7 @@ const ongoing = [
     name: "server info selfbot",
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
-      "shows every roles, their perms in a .txt filr",
+      "shows every roles, their perms in a .txt file",
       "displays full server roles hierarchy, ALSO in a .txt file",
       "no admin perms needed, NO perms",
       "currently adding more shi"
@@ -48,7 +48,7 @@ const ongoing = [
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
     langColor: "#68a063",
-    tags: ["Selfbot", "File", "NodeJS", "Server"],
+    tags: ["Selfbot", "File", "NodeJS", "Server", "Spy?? somewhat"],
     progress: 60
   }
 ];
