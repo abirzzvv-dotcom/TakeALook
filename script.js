@@ -1,1 +1,219 @@
-let vmV=typeof globalThis!=='undefined'?globalThis:typeof window!=='undefined'?window:global,vmM=Object['defineProperty'],vms=Object['create'],vmS=Object['getOwnPropertyDescriptor'],vmz=Object['getOwnPropertyNames'],vmO=Object['getOwnPropertySymbols'],vmu=Object['setPrototypeOf'],vmf=Object['getPrototypeOf'],vmF=Function['prototype']['call'],vmP=Function['prototype']['apply'],vmT=Reflect['apply'],vmt_1df6fd=vmV['vmt_1df6fd']||(vmV['vmt_1df6fd']={});const vmZ_1d753a=(function(){let h=['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','AREIGQACAkR/5H1C64rUBBwIHnN0b3BQcm9wYWdhdGlvbgQACBhfMHgzNjlmODYkJDEIEmNsYXNzTGlzdAgMdG9nZ2xlCAhvcGVuBAEIGF8weDJjYzBmNyQkMQQCCBpxdWVyeVNlbGVjdG9yCAhzcGFuCAhoaWRlCA5kZXRhaWxzCBZ0ZXh0Q29udGVudFyqA6QDEAiMAQBuBqYDjAEIjAEANjYAbg6mA4wBCIwBADY2DDY2AG4GpgMIjAEANjYAbgxoAGQAjgEGBAAEAAQAAAQABAEEAAAEAgQDAAQEBAUAAAQGBAEEAQQHBAMABAQEBQAABAEAAAQIBAIABAcABAkECgAABAYEAQQBAAQLAAQMBA0ABFBWVFg=','ARAIEQAEEP7W/JQ50HJDbggQZG9jdW1lbnQIGmNyZWF0ZUVsZW1lbnQIBmRpdgQBCAhwcm9qCBAgb25nb2luZwgACBJjbGFzc05hbWUIUjxzcGFuIGNsYXNzPSJsYW5nLWRvdCIgc3R5bGU9ImJhY2tncm91bmQ6CBJsYW5nQ29sb3IIKDtib3gtc2hhZG93OjAgMCA1cHggCBY2NiI+PC9zcGFuPggIdGFncwgGbWFwBBUICGpvaW4IEHByb2dyZXNzCLYCCiAgICA8ZGl2IGNsYXNzPSJwcm9ncmVzcy13cmFwIj4KICAgICAgPGRpdiBjbGFzcz0icHJvZ3Jlc3MtaGVhZCI+CiAgICAgICAgPHNwYW4gY2xhc3M9InByb2dyZXNzLWxhYmVsIj5Qcm9ncmVzczwvc3Bhbj4KICAgICAgICA8c3BhbiBjbGFzcz0icHJvZ3Jlc3MtcGN0Ij4I1AElPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0icHJvZ3Jlc3MtYmciPjxkaXYgY2xhc3M9InByb2dyZXNzLWZpbGwiPjwvZGl2PjwvZGl2PgogICAgPC9kaXY+CiAgCMABCiAgICA8ZGl2IGNsYXNzPSJwcm9qLXRvcC1iYXIiPjwvZGl2PgogICAgPGRpdiBjbGFzcz0icHJvai1oZWFkIj4KICAgICAgPHNwYW4gY2xhc3M9InByb2otbmFtZSI+CAhuYW1lCFg8L3NwYW4+CiAgICAgIDxhIGNsYXNzPSJwcm9qLWdoLWxpbmsiIGhyZWY9IggIbGluawiGASIgdGFyZ2V0PSJfYmxhbmsiIHJlbD0ibm9vcGVuZXIgbm9yZWZlcnJlciIgdGl0bGU9IlZpZXcgb24gR2l0SHViIj4IDGdoSWNvbghWPC9hPgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJwcm9qLWRlc2MiPggWZGVzY3JpcHRpb24ICGNsaXAIFjwvZGl2PgogICAgCHQKICAgIDxkaXYgY2xhc3M9InByb2otbWV0YSI+CiAgICAgIDxkaXYgY2xhc3M9Imxhbmctd3JhcCI+CDA8c3BhbiBjbGFzcz0ibGFuZy1uYW1lIj4IEGxhbmd1YWdlCCg8L3NwYW4+PC9kaXY+CiAgICAgIAgcCiAgICA8L2Rpdj4KICAIEmlubmVySFRNTAgOZGV0YWlscwgMbGVuZ3RoBAAIGF8weDQwNzMzNSQkMQgYXzB4NGI5M2E5JCQxCBhfMHgyY2MwZjckJDEIGF8weDM2OWY4NiQkMQiaAzxzdmcgY2xhc3M9ImNoZXZyb24iIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiLz48L3N2Zz4EFggMYnV0dG9uCB5wcm9qLWV4cGFuZC1idG4IKDxzcGFuPmRldGFpbHM8L3NwYW4+CBhwcm9qLWRldGFpbHMIQDxkaXYgY2xhc3M9InByb2otZGV0YWlscy1pbm5lciI+CAw8L2Rpdj4IIGFkZEV2ZW50TGlzdGVuZXIICmNsaWNrBBcEAggWYXBwZW5kQ2hpbGTeA6oDBACkAwQAlgEEAAgAjAEEAQAEAjYANgAABANuBAEOBAIMBAIABAQQBAFoAAAEBWQAAAQGFACOAQQHBgAABAgQBACMAQQJOgAUAAAEChQAEAQAjAEECToAFAAABAsUAA4EAxAEAIwBBAwIAIwBBA0ABA7IAQA2ADYAAAQDbgQBCACMAQQPAAQGNgA2AAAEA24EAQ4EBBAEAQgAaAAGABAEAIwBBBAEAFIAaAAABBEQBACMAQQQOgAUAAAEEhQAZAAABAYOBAUMBAIABBMQBACMAQQUOgAUAAAEFRQAEAQAjAEEFjoAFAAABBcUAKYDBBg6ABQAAAQZFAAQBACMAQQapgMEGwAEA2wEAToAFAAABBwUAAwEBToAFAAABB0UAAwEAzoAFAAABB4UABAEAIwBBB86ABQAAAQgFAAMBAQ6ABQAAAQhFACOAQQiBgAQBACMAQQjCABoAAYAEAQAjAEEI4wBBCQABCVcAGgAqgMEAKQDBAC0AwQmtAMEJ7QDBCi0AwQpAAQqsgMEJhAEAIwBBCMIAIwBBA0ABCvIAQA2ADYAAAQDbgQBCACMAQQPAAQGNgA2AAAEA24EAbIDBCeWAQQACACMAQQBAAQsNgA2AAAEA24EAbIDBCimAwQoAAQtjgEEBwYApgMEKAAELqYDBCY6ABQAjgEEIgYAlgEEAAgAjAEEAQAEAjYANgAABANuBAGyAwQppgMEKQAEL44BBAcGAKYDBCkABDCmAwQnOgAUAAAEMRQAjgEEIgYApgMEKAgAjAEEMgAEMzYANgAABDTIAQA2ADYAAAQ1bgQCBgAMBAIIAIwBBDamAwQoNgA2AAAEA24EAQYADAQCCACMAQQ2pgMEKTYANgAABANuBAEGAKwDBAAMBAJwAKwDBAACAHAADhwiICRuenqMAYoBjgH8AYoCigLUAw==','ARAAEQAAAL+5QF70FXOYCAgQZG9jdW1lbnQICGJvZHkIugI8ZGl2IHN0eWxlPSJjb2xvcjojNzI3NjdkO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OmNlbnRlcjtoZWlnaHQ6MTAwdmg7Zm9udC1mYW1pbHk6SW50ZXIsc2Fucy1zZXJpZiI+ZmFpbGVkIHRvIGxvYWQgcHJvZmlsZSBkYXRhPC9kaXY+CBJpbm5lckhUTUwOBAAEAQQCBAMAAACWAYwBAI4BBgJw'],i={'0':0xe9,'1':0x48,'2':0x1c7,'3':0x5,'4':0x1b0,'5':0xed,'6':0xdd,'7':0xca,'8':0x49,'9':0x1e0,'10':0xd7,'11':0x74,'12':0xb5,'13':0x13e,'14':0x9b,'15':0xd9,'16':0x1ba,'17':0x103,'18':0x3e,'19':0x178,'20':0x1d,'21':0x1c9,'22':0x7,'23':0x177,'24':0x7c,'25':0x86,'26':0xfa,'27':0x1cf,'28':0x70,'29':0x106,'32':0x2,'40':0x1ec,'41':0x170,'42':0x1fe,'43':0x18c,'44':0x14d,'45':0x33,'46':0x1ea,'47':0x31,'50':0x144,'51':0x107,'52':0x32,'53':0x6b,'54':0x17,'55':0x11,'56':0xec,'57':0xce,'58':0x172,'59':0x57,'60':0x1be,'61':0x67,'62':0x6a,'63':0xaf,'64':0x62,'65':0xde,'70':0xfb,'71':0xd3,'72':0x64,'73':0x50,'74':0x13c,'75':0x19f,'76':0xb,'77':0x1aa,'78':0x15f,'79':0x7d,'80':0x18d,'81':0x1b2,'82':0xfe,'83':0x16a,'84':0x188,'90':0x73,'91':0x1a8,'92':0x125,'93':0xe8,'94':0x15c,'95':0x141,'100':0x4f,'101':0x1b9,'102':0x161,'103':0x1cb,'104':0x44,'105':0x127,'106':0x18a,'107':0x121,'110':0x1ee,'111':0xa9,'112':0x14a,'120':0x1a9,'121':0x147,'122':0x58,'123':0x16d,'124':0xbe,'125':0x1b6,'126':0x1da,'127':0x22,'128':0x94,'129':0x19b,'130':0x155,'131':0x115,'132':0xea,'140':0x10c,'141':0x175,'142':0x1c4,'143':0x3b,'144':0x21,'145':0xc5,'146':0xe,'147':0x157,'148':0xcc,'149':0x5b,'150':0x1a3,'151':0xf8,'152':0xf1,'153':0x160,'154':0x1ac,'155':0x76,'156':0xf6,'157':0x186,'158':0x87,'160':0x187,'161':0x15d,'162':0x96,'163':0x27,'164':0x120,'165':0x171,'166':0x8f,'167':0x15b,'168':0x1ae,'169':0x1c5,'180':0x1c8,'181':0x1bd,'182':0x0,'183':0x5d,'184':0x138,'185':0x16c,'200':0xc7,'201':0x45,'202':0x72,'210':0x168,'211':0x105,'212':0x37,'213':0x8b,'214':0x1dd,'215':0x5c,'216':0x179,'217':0x12c,'218':0x1f,'219':0xd,'220':0x1e1,'221':0x1c2,'250':0x1d6,'251':0x162,'252':0x13a,'253':0x1c,'254':0x19c,'255':0x116,'256':0x17c,'257':0x10,'258':0x2e,'259':0x1dc,'260':0x59,'261':0x156,'270':0x95,'271':0xc};const a=0x1,K=0x2,Z=0x3,L=0x4,D=0x78,m=0x79,t=0x7a,H=typeof 0x0n,q=[],V=function(){throw new TypeError('\x27caller\x27,\x20\x27callee\x27,\x20and\x20\x27arguments\x27\x20properties\x20may\x20not\x20be\x20accessed\x20on\x20strict\x20mode\x20functions\x20or\x20the\x20arguments\x20objects\x20for\x20calls\x20to\x20them');};Object['preventExtensions'](V);let N=new WeakSet(),w=new WeakSet(),M=new WeakMap();function s(hG,hI,hg){try{vmM(hG,hI,hg);}catch(hj){}}function S(hG,hI){let hg=new Array(hI),hj=![];for(let hW=hI-0x1;hW>=0x0;hW--){let hB=hG();hB&&typeof hB==='object'&&N['has'](hB)?(hj=!![],hg[hW]=hB):hg[hW]=hB;}if(!hj)return hg;let hy=[];for(let hU=0x0;hU<hI;hU++){let hX=hg[hU];if(hX&&typeof hX==='object'&&N['has'](hX)){let hx=hX['value'];if(Array['isArray'](hx)){for(let hJ=0x0;hJ<hx['length'];hJ++)hy['push'](hx[hJ]);}}else hy['push'](hX);}return hy;}function z(hG){let hI=[];for(let hg in hG){hI['push'](hg);}return hI;}function O(hG){return Array['prototype']['slice']['call'](hG);}function u(hG){return typeof hG==='function'&&hG['prototype']?hG['prototype']:hG;}function f(hG){if(typeof hG==='function')return vmf(hG);let hI=vmf(hG),hg=hI&&vmS(hI,'constructor'),hj=hg&&hg['value'],hy=hj&&typeof hj==='function'&&(hj['prototype']===hI||vmf(hj['prototype'])===vmf(hI));if(hy)return vmf(hI);return hI;}function F(hG,hI){let hg=hG;while(hg!==null){let hj=vmS(hg,hI);if(hj)return{'desc':hj,'proto':hg};hg=vmf(hg);}return{'desc':null,'proto':hG};}function P(hG,hI){if(!hG['_$Hg52Iu'])return;hI in hG['_$Hg52Iu']&&delete hG['_$Hg52Iu'][hI];let hg=hI['indexOf']('$$');if(hg!==-0x1){let hj=hI['substring'](0x0,hg);hj in hG['_$Hg52Iu']&&delete hG['_$Hg52Iu'][hj];}}function T(hG,hI){let hg=hG;while(hg){P(hg,hI),hg=hg['_$pALO2z'];}}function Q(hG,hI,hg,hj){if(hj){let hy=Reflect['set'](hG,hI,hg);if(!hy)throw new TypeError('Cannot\x20assign\x20to\x20read\x20only\x20property\x20\x27'+String(hI)+'\x27\x20of\x20object');}else Reflect['set'](hG,hI,hg);}function v(){return!vmt_1df6fd['_$wHMPFV']&&(vmt_1df6fd['_$wHMPFV']=new Map()),vmt_1df6fd['_$wHMPFV'];}function p(){return vmt_1df6fd['_$wHMPFV']||null;}function A(hG,hI,hg){if(hG[0x6]===undefined||!hg)return;let hj=hG[0x7][hG[0x6]];!hI['_$fZ5LrD']&&(hI['_$fZ5LrD']=vms(null)),hI['_$fZ5LrD'][hj]=hg,hG[0x17]&&(!hI['_$RObKXF']&&(hI['_$RObKXF']=vms(null)),hI['_$RObKXF'][hj]=!![]),s(hg,'name',{'value':hj,'writable':![],'enumerable':![],'configurable':!![]});}function G(hG){return'_$KhJuiD'+hG['substring'](0x1)+'_$2Fr9dU';}function I(hG){return'_$rC0kwr'+hG['substring'](0x1)+'_$0tluTj';}function g(hG,hI,hg,hj,hy){let hW;return hj?hW=function hB(){let hU=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return hG(hI,arguments,hg,hW,hU,this===hy?undefined:this);}:hW=function hU(){let hX=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return hG(hI,arguments,hg,hW,hX,this);},M['set'](hW,{'b':hI,'e':hg}),hW;}function j(hG,hI,hg,hj,hy){let hW;return hj?hW=async function hB(){let hU=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return await hG(hI,arguments,hg,hW,hU,undefined,this===hy?undefined:this);}:hW=async function hU(){let hX=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return await hG(hI,arguments,hg,hW,hX,undefined,this);},hW;}function y(hG,hI,hg,hj,hy,hW){let hB;return hy?hB=function hU(){return hG(hI,arguments,hg,hB,undefined,this===hW?undefined:this);}:hB=function hX(){return hG(hI,arguments,hg,hB,undefined,this);},hj['add'](hB),hB;}function W(hG,hI,hg,hj){let hy;return hy={'axmZlk':(...hW)=>{return hG(hI,hW,hg,hy,undefined,hj);}}['axmZlk'],hy;}function B(hG,hI,hg,hj){let hy;return hy={'axmZlk':async(...hW)=>{return await hG(hI,hW,hg,hy,undefined,undefined,hj);}}['axmZlk'],hy;}function U(hG,hI,hg,hj,hy){let hW;return hj?hW={'axmZlk'(){let hB=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return hG(hI,arguments,hg,hW,hB,this===hy?undefined:this);}}['axmZlk']:hW={'axmZlk'(){let hB=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return hG(hI,arguments,hg,hW,hB,this);}}['axmZlk'],M['set'](hW,{'b':hI,'e':hg}),hW;}function X(hG,hI,hg,hj,hy){let hW;return hj?hW={async 'axmZlk'(){let hB=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return await hG(hI,arguments,hg,hW,hB,undefined,this===hy?undefined:this);}}['axmZlk']:hW={async 'axmZlk'(){let hB=new.target!==undefined?new.target:vmt_1df6fd['_$fKsM9s'];return await hG(hI,arguments,hg,hW,hB,undefined,this);}}['axmZlk'],hW;}let x=0x10,J=0xd,r=0x10,R=0x200;function l(hG,hI){let hg=(hG^0xa5a5a5a5)>>>0x0;hg=(hg^hI*0x9e3779b9)>>>0x0,hg=(hg^hg>>>0x11)*0xed558359>>>0x0,hg=(hg^hg>>>0xb)*0x1b873593>>>0x0;let hj=(hg|0x10001)>>>0x0;hg=(hg^hI*0x517cc1b7)>>>0x0,hg=(hg^hg>>>0xd)*0xc2efb7d3>>>0x0,hg=(hg^hg>>>0xf)*0x68e31da9>>>0x0;let hy=(hg|0x10001)>>>0x0;hg=(hg^hg>>>0x10)*0x85ebca77>>>0x0,hg=(hg^hg>>>0xd)*0xcc9e2d51>>>0x0;let hW=(hg|0x1)>>>0x0;return{'m1':hj,'m2':hy,'phi':hW};}function b(hG,hI){return hG=hG>>>0x0,hG^=hG>>>x,hG=Math['imul'](hG,hI['m1'])>>>0x0,hG^=hG>>>J,hG=Math['imul'](hG,hI['m2'])>>>0x0,hG^=hG>>>r,hG>>>0x0;}function o(hG,hI,hg,hj){let hy=(hG^hI*hj['phi'])>>>0x0;return hy=(hy^Math['imul'](hg,hI|0x1))>>>0x0,hy=(hy^hy>>>0xb)>>>0x0,hy=Math['imul'](hy,0x1b873593)>>>0x0,hy=(hy^hy>>>0xf)>>>0x0,b(hy,hj);}function C(hG,hI,hg,hj){let hy=l(hG,hI),hW=hG^hg*hy['phi']>>>0x0;hW=(hW^hj*0x27d4eb2d>>>0x0)>>>0x0,hW=b(hW,hy);let hB=[];for(let hX=0x0;hX<R;hX++){hB[hX]=hX;}for(let hx=R-0x1;hx>0x0;hx--){let hJ=o(hW,hx,hI,hy),hr=hJ%(hx+0x1),hR=hB[hx];hB[hx]=hB[hr],hB[hr]=hR;}let hU={};for(let hl=0x0;hl<R;hl++){hU[hl]=hB[hl];}return hU;}let k={};function d(hG,hI,hg,hj){let hy=hG+'_'+hI+'_'+hg+'_'+hj;return!k[hy]&&(k[hy]=C(hG,hI,hg,hj)),k[hy];}function E(hG,hI,hg,hj,hy,hW){let hB=new Array(0x8),hU=0x0,hX=new Array((hG[0xc]||0x0)+(hG[0xe]||0x0)),hx=0x0,hJ=hG[0x7],hr=hG[0x16],hR=hG[0x14]||q,hl=hG[0x15]||q,hb=hr['length']>>0x1,ho=(hG[0xc]*0x1f^hG[0xe]*0x11^hb*0xd^hJ['length']*0x7)>>>0x0&0x3,hC,hk,hd;switch(ho){case 0x1:hC=0x1,hk=0x0,hd=0x1;break;case 0x2:hC=0x0,hk=hb,hd=0x0;break;case 0x3:hC=hb,hk=0x0,hd=0x0;break;default:hC=0x0,hk=0x1,hd=0x1;break;}let hE=null,hn=null,hc=![],hY=undefined,i0=![],i1=0x0,i2=![],i3=0x0,i4=hG[0xf]||i,i5=!!hG[0x1],i6=!!hG[0x0],i7=!!hG[0x3],i8=!!hG[0x8],i9=hW,ih=!!hG[0x18];!i5&&!ih&&(hW===undefined||hW===null)&&(hW=vmV);if(hG['os']!==undefined){let iO=hr['length']>>0x1,iu=hJ?hJ['length']:0x0;i4=d(hG['os'],hG['os2'],iO,iu);}let ii=iF=>{hB[hU++]=iF;},ia=(
+const profile = {
+username: "Abirz",
+handle: "abirrrzzzz",
+initials: "AB",
+avatar: "https://cdn.discordapp.com/attachments/1488144355301527657/1489211915178606673/Picsart_26-04-02_16-35-56-615.png?ex=69cf982c&is=69ce46ac&hm=b1fb6b45e8bfa55d7c1e253e5aeab4f2d7e2ea639a6bffa796cfd0e035d71180&",
+tagline: "i lowknetanyahuinely shit",
+bio: "hi mate",
+description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
+status: "online"
+};
+
+const badges = [
+{ id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
+{ id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
+{ id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
+{ id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
+];
+
+const projects = [
+{
+id: "music-selfbot",
+name: "music selfbot",
+description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
+details: [
+"plays music directly in voice channels via selfbot",
+"no bot token needed, just your user token",
+"supports youtube, soundcloud and more",
+"queue system with skip, pause, stop commands",
+"zero external dependencies beyond audio libs"
+],
+link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
+language: "Node JS",
+langColor: "#68a063",
+tags: ["NodeJS", "Selfbot", "Discord", "Music"]
+}
+];
+
+const ongoing = [
+{
+id: "server-info-selfbot",
+name: "server info selfbot",
+description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
+details: [
+"lists all roles and their permission flags",
+"shows channel permission overrides per role",
+"displays full server hierarchy tree",
+"no admin perms needed, runs on user token",
+"currently working on member audit log scraping"
+],
+link: "https://www.google.com/search?q=not+done+yet+brochacho",
+language: "Node JS",
+langColor: "#68a063",
+tags: ["Selfbot", "File", "NodeJS", "Server"],
+progress: 60
+}
+];
+
+function loadData() { return Promise.resolve(); }
+
+const MAX = 65;
+const clip = s => s.length > MAX ? s.slice(0, MAX) + '\u2026' : s;
+const $ = id => document.getElementById(id);
+
+const ghIcon = <svg width="11" height="11" viewBox="0 0 16 16" fill="currentColor" style="display:block;flex-shrink:0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub;
+
+let activeTab = 'projects';
+
+function render() {
+const dotColor = { online: '#3ba55c', idle: '#faa81a', dnd: '#ed4245' }[profile.status] || '#747f8d';
+
+$('uname').textContent = profile.username;
+$('handle').textContent = '@' + profile.handle;
+$('tagline').textContent = profile.tagline;
+$('bioName').textContent = profile.bio;
+$('bioDesc').textContent = profile.description;
+
+const dot = $('statusDot');
+dot.style.background = dotColor;
+dot.style.boxShadow = 0 0 8px ${dotColor}99;
+
+const img = new Image();
+img.src = profile.avatar;
+img.onload = () => {
+const ai = $('avatarImg');
+ai.innerHTML = '';
+ai.appendChild(img);
+img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:50%';
+};
+img.onerror = () => { $('avatarInitials').textContent = profile.initials; };
+$('avatarInitials').textContent = profile.initials;
+
+renderBadges();
+renderTabs();
+renderList();
+}
+
+function renderBadges() {
+const row = $('badgesRow');
+row.innerHTML = '<span class="badges-label">Badges</span>';
+badges.forEach((b, i) => {
+const wrap = document.createElement('div');
+wrap.className = 'badge-wrap';
+wrap.style.setProperty('--glow', 0 0 12px ${b.accent}99);
+
+const icon = document.createElement('div');  
+icon.className = 'badge-icon';  
+
+const im = document.createElement('img');  
+im.src = `./${b.id}.${b.ext}`;  
+im.alt = b.name;  
+icon.appendChild(im);  
+
+let popup = null;  
+icon.onclick = () => {  
+  icon.classList.add('shaking');  
+  setTimeout(() => icon.classList.remove('shaking'), 450);  
+  if (popup) { popup.remove(); popup = null; return; }  
+  popup = mkPopup(b, icon);  
+  document.body.appendChild(popup);  
+  const close = e => {  
+    if (!wrap.contains(e.target)) { popup?.remove(); popup = null; document.removeEventListener('mousedown', close); }  
+  };  
+  setTimeout(() => document.addEventListener('mousedown', close), 10);  
+};  
+
+wrap.appendChild(icon);  
+row.appendChild(wrap);  
+setTimeout(() => wrap.classList.add('in'), i * 90 + 250);
+
+});
+}
+
+function mkPopup(b, anchor) {
+const p = document.createElement('div');
+p.className = 'badge-popup';
+p.style.setProperty('--accent-light', b.accent + '55');
+p.style.setProperty('--accent-dim', b.accent + '22');
+p.innerHTML =   <div class="badge-popup-top">   <div class="badge-popup-icon"><img src="./${b.id}.${b.ext}" alt="${b.name}" /></div>   <div class="badge-popup-name">${b.name}</div>   </div>   <div class="badge-popup-desc">${b.description}</div>   <div class="badge-popup-bar" style="background:linear-gradient(90deg,${b.accent}99,transparent)"></div>   <div class="badge-popup-arrow"></div>  ;
+if (anchor) {
+const rect = anchor.getBoundingClientRect();
+p.style.left = (rect.left + rect.width / 2) + 'px';
+p.style.top = rect.top + 'px';
+}
+return p;
+}
+
+function renderTabs() {
+const tabs = $('tabs');
+tabs.innerHTML = '';
+[['projects', 'Projects', projects.length], ['ongoing', 'Ongoing', ongoing.length]].forEach(([id, label, n]) => {
+const btn = document.createElement('button');
+btn.className = 'tab' + (activeTab === id ? ' active' : '');
+btn.innerHTML = ${label} <span class="tab-count">${n}</span>;
+btn.onclick = () => { activeTab = id; renderTabs(); renderList(); };
+tabs.appendChild(btn);
+});
+}
+
+function renderList() {
+const list = $('list');
+list.innerHTML = '';
+const items = activeTab === 'projects' ? projects : ongoing;
+if (!items.length) {
+list.innerHTML = <div class="empty">nothing here yet</div>;
+return;
+}
+items.forEach((p, i) => {
+const el = mkCard(p, activeTab === 'ongoing');
+list.appendChild(el);
+setTimeout(() => el.classList.add('in'), i * 70 + 30);
+if (activeTab === 'ongoing' && p.progress != null) {
+setTimeout(() => {
+const fill = el.querySelector('.progress-fill');
+if (fill) fill.style.width = p.progress + '%';
+}, i * 70 + 200);
+}
+});
+}
+
+function mkCard(p, isOngoing) {
+const el = document.createElement('div');
+el.className = 'proj' + (isOngoing ? ' ongoing' : '');
+
+const langDot = <span class="lang-dot" style="background:${p.langColor};box-shadow:0 0 5px ${p.langColor}66"></span>;
+const tags = p.tags.map(t => <span class="tag">${t}</span>).join('');
+const progress = isOngoing && p.progress != null ?   <div class="progress-wrap">   <div class="progress-head">   <span class="progress-label">Progress</span>   <span class="progress-pct">${p.progress}%</span>   </div>   <div class="progress-bg"><div class="progress-fill"></div></div>   </div>   : '';
+
+el.innerHTML =   <div class="proj-top-bar"></div>   <div class="proj-head">   <span class="proj-name">${p.name}</span>   <a class="proj-gh-link" href="${p.link}" target="_blank" rel="noopener noreferrer" title="View on GitHub">${ghIcon}</a>   </div>   <div class="proj-desc">${clip(p.description)}</div>   ${progress}   <div class="proj-meta">   <div class="lang-wrap">${langDot}<span class="lang-name">${p.language}</span></div>   ${tags}   </div>  ;
+
+if (p.details && p.details.length > 0) {
+const chevron = <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>;
+const detailItems = p.details.map(d => <div class="proj-detail-item"><span class="proj-detail-bullet"></span><span>${d}</span></div>).join('');
+
+const btn = document.createElement('button');  
+btn.className = 'proj-expand-btn';  
+btn.innerHTML = `<span>details</span>${chevron}`;  
+
+const box = document.createElement('div');  
+box.className = 'proj-details';  
+box.innerHTML = `<div class="proj-details-inner">${detailItems}</div>`;  
+
+btn.addEventListener('click', e => {  
+  e.stopPropagation();  
+  const open = box.classList.toggle('open');  
+  btn.classList.toggle('open', open);  
+  btn.querySelector('span').textContent = open ? 'hide' : 'details';  
+});  
+
+el.appendChild(btn);  
+el.appendChild(box);
+
+}
+
+return el;
+}
+
+loadData().then(render).catch(() => {
+document.body.innerHTML = '<div style="color:#72767d;display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif">failed to load profile data</div>';
+});
