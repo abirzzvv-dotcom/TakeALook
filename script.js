@@ -2,35 +2,31 @@ const profile = {
   username: "Abirz",
   handle: "abirrrzzzz",
   initials: "AB",
-  avatar: "avatar.png",
-  tagline: "netanyahu",
+  avatar: "https://cdn.discordapp.com/attachments/1488144355301527657/1489211915178606673/Picsart_26-04-02_16-35-56-615.png?ex=69cf982c&is=69ce46ac&hm=b1fb6b45e8bfa55d7c1e253e5aeab4f2d7e2ea639a6bffa796cfd0e035d71180&",
+  tagline: "i lowknetanyahuinely shit",
   bio: "hi mate",
-  description: "purely for looking fuckass but cool, but you definitely CAN use the projects(except you cant)",
+  description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
   status: "online"
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 37 Reached", accent: "#23a55a", ext: "png" },
-  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026💔",  accent: "#5662f6", ext: "svg" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached — Discord April Fools 2026", accent: "#23a55a", ext: "png" },
+  { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026\uD83E\uDD1E",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
 ];
-// SOOO
-// its mr hacker, here??
-// tryna fcking f12 on me
-// nigga i dont give a fuck, except
-// im just curious
-// what the actual FUCK brings you here?
+
 const projects = [
   {
     id: "music-selfbot",
     name: "music selfbot",
     description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
     details: [
-      "plays music in vc(no shit)",
-      "idk just enter a music name, it tries to find it in youtube",
-      "queue system, playlist system(two versions, one for db, one for cheap workaround)",
-      "zero changes required(not actually)"
+      "plays music directly in voice channels via selfbot",
+      "no bot token needed, just your user token",
+      "supports youtube, soundcloud and more",
+      "queue system with skip, pause, stop commands",
+      "zero external dependencies beyond audio libs"
     ],
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
@@ -45,9 +41,11 @@ const ongoing = [
     name: "server info selfbot",
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
-      "lists all roles and their permission flags(in a txt file)",
-      "displays full server hierarchy tree (ALSO in a txt file)",
-      "no admin perms needed, runs on user token"
+      "lists all roles and their permission flags",
+      "shows channel permission overrides per role",
+      "displays full server hierarchy tree",
+      "no admin perms needed, runs on user token",
+      "currently working on member audit log scraping"
     ],
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
@@ -190,6 +188,9 @@ function mkCard(p, isOngoing) {
   const el = document.createElement('div');
   el.className = 'proj' + (isOngoing ? ' ongoing' : '');
 
+  const isLong = p.description.length > MAX;
+  const shortDesc = clip(p.description);
+
   const langDot = `<span class="lang-dot" style="background:${p.langColor};box-shadow:0 0 5px ${p.langColor}66"></span>`;
   const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
   const progress = isOngoing && p.progress != null ? `
@@ -208,13 +209,27 @@ function mkCard(p, isOngoing) {
       <span class="proj-name">${p.name}</span>
       <a class="proj-gh-link" href="${p.link}" target="_blank" rel="noopener noreferrer" title="View on GitHub">${ghIcon}</a>
     </div>
-    <div class="proj-desc">${clip(p.description)}</div>
+    <div class="proj-desc">
+      <span class="desc-content">${shortDesc}</span>${isLong ? `<button class="read-more-btn">read more</button>` : ''}
+    </div>
     ${progress}
     <div class="proj-meta">
       <div class="lang-wrap">${langDot}<span class="lang-name">${p.language}</span></div>
       ${tags}
     </div>
   `;
+
+  if (isLong) {
+    let expanded = false;
+    const rmBtn = el.querySelector('.read-more-btn');
+    const descContent = el.querySelector('.desc-content');
+    rmBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      expanded = !expanded;
+      descContent.textContent = expanded ? p.description : shortDesc;
+      rmBtn.textContent = expanded ? 'read less' : 'read more';
+    });
+  }
 
   if (p.details && p.details.length > 0) {
     const chevron = `<svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>`;
