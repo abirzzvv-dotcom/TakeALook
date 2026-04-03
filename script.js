@@ -2,7 +2,7 @@ const profile = {
   username: "Abirz",
   handle: "abirrrzzzz",
   initials: "AB",
-  avatar: "https://cdn.discordapp.com/attachments/1488144355301527657/1489211915178606673/Picsart_26-04-02_16-35-56-615.png?ex=69cf982c&is=69ce46ac&hm=b1fb6b45e8bfa55d7c1e253e5aeab4f2d7e2ea639a6bffa796cfd0e035d71180&",
+  avatar: "avatar.png",
   tagline: "i lowknetanyahuinely shit",
   bio: "hi mate",
   description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
@@ -22,11 +22,10 @@ const projects = [
     name: "music selfbot",
     description: "you need NOTHING, and i mean NOTHING to run this, except for your token EXCEPT its not finished yet is it...",
     details: [
-      "plays music directly in voice channels via selfbot",
-      "no bot token needed, just your user token",
-      "supports youtube, soundcloud and more",
-      "queue system with skip, pause, stop commands",
-      "zero external dependencies beyond audio libs"
+      "plays music in voice channels via selfbot",
+      "YOU are running ts at your own risk, if you dont agree, then dont fw me",
+      "idk bro just enterr a song name",
+      "queue system with skip, pause, stop, playlist(with db OR localDB)
     ],
     link: "https://www.google.com/search?q=i+wonder+what+curiousity+brings+you+here",
     language: "Node JS",
@@ -42,10 +41,10 @@ const ongoing = [
     description: "basically no fucking permissions, BUT you can see stuff like role permissions, hierarchy and stuff.",
     details: [
       "lists all roles and their permission flags",
-      "shows channel permission overrides per role",
-      "displays full server hierarchy tree",
+      "shows role permissions, stored in a txt file",
+      "displays full server hierarchy tree ALSO stored in a txt file",
       "no admin perms needed, runs on user token",
-      "currently working on member audit log scraping"
+      "currently NOT working (sleepy"
     ],
     link: "https://www.google.com/search?q=not+done+yet+brochacho",
     language: "Node JS",
