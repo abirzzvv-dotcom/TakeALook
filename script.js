@@ -3,14 +3,14 @@ const profile = {
   handle: "abirrrzzzz",
   initials: "AB",
   avatar: "avatar.png",
-  tagline: "i lowknetanyahuinely shit",
+  tagline: "type sh,,",
   bio: "hi mate",
-  description: "purely for looking fuckass but cool, but you definitely CAN use the projects",
+  description: "hello or something",
   status: "online"
 };
 
 const badges = [
-  { id: "meadow",  name: "Last Meadow Online", description: "Level 67 Reached", accent: "#23a55a", ext: "png" },
+  { id: "meadow",  name: "Last Meadow Online", description: "Level 37 Reached", accent: "#23a55a", ext: "png" },
   { id: "nitro",   name: "Discord Nitro",      description: "Subscriber since Apr 1, grand 2026",  accent: "#5662f6", ext: "svg" },
   { id: "booster", name: "Server Booster",     description: "Server boosting since Apr 1st, 2026",            accent: "#ff73fa", ext: "svg" },
   { id: "quest",   name: "Quest Completed",    description: "Completed a Quest",                               accent: "#f9a825", ext: "png" }
